@@ -56,4 +56,7 @@ dependencies {
     //引入ButterKnife
     implementation 'com.jakewharton:butterknife:10.2.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.0'
+
+    //RxPermissions
+    implementation 'com.github.tbruyelle:rxpermissions:0.10.2'
 }
