@@ -22,13 +22,13 @@
         <activity android:name=".parcelable.ParcelActivity"/>
 
         <service
-            android:name=".MyService1"
+            android:name=".multiProcess.MyService1"
             android:label="@string/app_name"
             android:process=":x1">
         </service>
 
         <service
-            android:name=".MyService2"
+            android:name=".multiProcess.MyService2"
             android:label="@string/app_name"
             android:process=":x2">
         </service>
