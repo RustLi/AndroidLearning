@@ -1,4 +1,4 @@
-package com.rustli.libtest;
+package com.rustli.libcommon;
 
 import org.junit.Test;
 

@@ -18,3 +18,14 @@ Android学习常用Demo
 
   > Rx系列，如Rxjava，Rxbinding
 
+* mvp
+
+  > mvp常用的框架代码
+
+* dagger2
+
+  > 依赖注入框架，解耦
+
+* libcommon
+
+  > 公共库，与业务无关，常用工具类等

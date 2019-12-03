@@ -8,9 +8,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-//import com.rustli.androidlearning.multiProcess.DaemonService;
-import com.rustli.androidlearning.lockscreen.LockService;
-import com.rustli.libtest.DaemonService;
+import com.rustli.androidlearning.multiProcess.DaemonService;
+import com.rustli.androidlearning.multiProcess.KeepWeChatAliveService;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
@@ -19,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Log.d(TAG, "onCreate: ");
+        Log.d(TAG, "onCreate: lwl");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         button1 = findViewById(R.id.button);
@@ -28,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                stopService(new Intent(MainActivity.this, KeepWeChatAliveService.class));
+                stopService(new Intent(MainActivity.this, KeepWeChatAliveService.class));
             }
         });
 
@@ -42,16 +41,17 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onResume() {
-        Log.d(TAG, "onResume: ");
+        Log.d(TAG, "onResume: lwl");
         super.onResume();
-//        startService(new Intent(this, KeepWeChatAliveService.class));
-        startService(new Intent(this, LockService.class));
+        startService(new Intent(this, KeepWeChatAliveService.class));
+//        startService(new Intent(this, LockService.class));
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-//        stopService(new Intent(this, KeepWeChatAliveService.class));
+        stopService(new Intent(this, KeepWeChatAliveService.class));
+//        stopService(new Intent(this, LockService.class));
     }
 
 }

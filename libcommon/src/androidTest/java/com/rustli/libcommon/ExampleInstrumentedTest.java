@@ -1,4 +1,4 @@
-package com.rustli.libtest;
+package com.rustli.libcommon;
 
 import android.content.Context;
 
@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("com.rustli.libtest.test", appContext.getPackageName());
+        assertEquals("com.rustli.libcommon.test", appContext.getPackageName());
     }
 }

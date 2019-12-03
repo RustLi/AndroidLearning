@@ -2,16 +2,15 @@ package com.rustli.androidlearning.multiProcess;
 
 import android.app.Service;
 import android.content.BroadcastReceiver;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.os.IBinder;
 import android.util.Log;
 
 import androidx.annotation.Nullable;
 
-import com.rustli.libtest.DaemonService;
-import com.rustli.libtest.ServiceUtil;
+import com.rustli.libcommon.ServiceUtil;
 
 
 public class KeepWeChatAliveService extends Service {
@@ -31,6 +30,22 @@ public class KeepWeChatAliveService extends Service {
 //        IntentFilter filter = new IntentFilter();
 //        filter.addAction(DaemonService.BROADCAST_START_KEEP_ALIVE);
 //        getApplicationContext().registerReceiver(messageReceive, filter);
+    }
+
+    private void startKeepAliveService(){
+        Log.d(TAG, "startKeepAliveService: ");
+//        Intent intent = new Intent();
+//        intent.setAction("com.example.xposedtest.TestActivity");
+//        final Intent explicitIntent = new Intent(createExplicitFromImplicitIntent(this,intent));
+//        startActivity(explicitIntent);
+
+        Intent intent = new Intent();
+//        ComponentName cn=new ComponentName("com.example.xposedtest",
+//                "com.example.xposedtest.MainActivity");
+        ComponentName cn=new ComponentName("com.rustli.androidlearning",
+                "com.rustli.androidlearning.MainActivity");
+        intent.setComponent(cn);
+        startActivity(intent);
     }
 
     @Override
@@ -56,10 +71,10 @@ public class KeepWeChatAliveService extends Service {
     public int onStartCommand(Intent intent, int flags, int startId) {
         Log.d(TAG, "onStartCommand: weChatMonitorThread = " + weChatMonitorThread);
         isThreadReleased = false;
-        if (weChatMonitorThread == null){
-            weChatMonitorThread = new Thread(new weChatMonitorRunnable(), "weChatMonitorRunnable");
-            weChatMonitorThread.start();
-        }
+//        if (weChatMonitorThread == null){
+//            weChatMonitorThread = new Thread(new weChatMonitorRunnable(), "weChatMonitorRunnable");
+//            weChatMonitorThread.start();
+//        }
         return START_STICKY;
     }
 
@@ -94,6 +109,7 @@ public class KeepWeChatAliveService extends Service {
             }
         }
     }
+
 
 
 

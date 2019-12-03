@@ -1,4 +1,3 @@
-/*
 package com.rustli.androidlearning.multiProcess;
 
 import android.app.Service;
@@ -12,7 +11,8 @@ import android.util.Log;
 
 import androidx.annotation.Nullable;
 
-import com.rustli.libtest.ServiceUtil;
+
+import com.rustli.libcommon.ServiceUtil;
 
 import java.util.List;
 
@@ -122,4 +122,3 @@ public class DaemonService extends Service {
         return explicitIntent;
     }
 }
-*/

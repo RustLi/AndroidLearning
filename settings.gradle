@@ -1,2 +1,2 @@
-include ':app', ':jetpack', ':rxmodule', ':view', ':dagger2', ':mvp', ':libdaemon'
+include ':app', ':jetpack', ':rxmodule', ':view', ':dagger2', ':mvp', ':libcommon'
 rootProject.name='AndroidLearning'

@@ -1,4 +1,4 @@
-package com.rustli.libtest;
+package com.rustli.libcommon;
 
 import android.app.ActivityManager;
 import android.content.Context;
