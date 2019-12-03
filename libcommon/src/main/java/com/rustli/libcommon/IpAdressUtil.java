@@ -1,4 +1,4 @@
-package com.rustli.androidlearning.utils;
+package com.rustli.libcommon;
 
 import android.content.Context;
 import android.net.ConnectivityManager;
@@ -14,12 +14,13 @@ import java.net.SocketException;
 import java.util.Enumeration;
 
 /**
- * Created by czq on 2016/11/23.
- * ip地址管理的工具类
+ * @date: 2019-12-03
+ * @author: lwl
+ * @description: ip地址管理的工具类
  */
 
-public class IpAdressUtils {
-    private static final String TAG = "IpAdressUtils";
+public class IpAdressUtil {
+    private static final String TAG = "IpAdressUtil";
     /**
      * gps获取ip
      * @return
