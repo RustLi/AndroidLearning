@@ -1,6 +1,15 @@
 apply plugin: 'com.android.application'
 
 android {
+
+    signingConfigs {
+        releaseKey {
+            storeFile file('./key.jks')
+            storePassword "android"
+            keyAlias "VirtualXposed"
+            keyPassword "android"
+        }
+    }
     compileSdkVersion rootProject.compileSdkVersion
     buildToolsVersion rootProject.buildToolsVersion
     defaultConfig {
@@ -15,6 +24,9 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug{
+            signingConfig signingConfigs.releaseKey
         }
     }
 }
