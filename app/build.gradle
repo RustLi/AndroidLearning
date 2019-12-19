@@ -25,7 +25,7 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
-        debug{
+        debug {
             signingConfig signingConfigs.releaseKey
         }
     }
@@ -35,6 +35,8 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation support["app_compat"]
     implementation support["constraintlayout"]
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
     testImplementation test["junit"]
     androidTestImplementation test["runner"]
     androidTestImplementation test["espresso"]

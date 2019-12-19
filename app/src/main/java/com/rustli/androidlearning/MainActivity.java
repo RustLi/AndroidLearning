@@ -1,6 +1,7 @@
 package com.rustli.androidlearning;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,10 +9,12 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.rustli.androidlearning.fragment_recycler.ItemFragment;
+import com.rustli.androidlearning.fragment_recycler.dummy.DummyContent;
 import com.rustli.androidlearning.multiProcess.DaemonService;
 import com.rustli.androidlearning.multiProcess.KeepWeChatAliveService;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements ItemFragment.OnListFragmentInteractionListener {
     private static final String TAG = "MainActivity";
     Button button2;
     Button button1;
@@ -37,6 +40,13 @@ public class MainActivity extends AppCompatActivity {
                 stopService(new Intent(MainActivity.this, DaemonService.class));
             }
         });
+
+        if (savedInstanceState == null) {
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            ItemFragment fragment = new ItemFragment();
+            transaction.replace(R.id.fragment_container, fragment);
+            transaction.commit();
+        }
     }
 
     @Override
@@ -54,4 +64,9 @@ public class MainActivity extends AppCompatActivity {
 //        stopService(new Intent(this, LockService.class));
     }
 
+    @Override
+    public void onListFragmentInteraction(DummyContent.DummyItem item) {
+
+
+    }
 }
