@@ -42,4 +42,12 @@ dependencies {
     androidTestImplementation test["espresso"]
     implementation 'androidx.localbroadcastmanager:localbroadcastmanager:1.0.0'
     implementation project(':libcommon')
+
+    //logback-android
+    implementation 'org.slf4j:slf4j-api:1.7.25'
+    implementation 'com.github.tony19:logback-android:2.0.0'
+    //timber
+    implementation 'com.jakewharton.timber:timber:4.7.1'
+
+    implementation 'pub.devrel:easypermissions:1.0.1'
 }

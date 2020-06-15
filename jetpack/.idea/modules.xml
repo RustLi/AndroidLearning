@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../AndroidLearning.iml" filepath="$PROJECT_DIR$/../AndroidLearning.iml" group="AndroidLearning" />
+      <module fileurl="file://$PROJECT_DIR$/../app/app.iml" filepath="$PROJECT_DIR$/../app/app.iml" group="AndroidLearning/app" />
+      <module fileurl="file://$PROJECT_DIR$/../dagger2/dagger2.iml" filepath="$PROJECT_DIR$/../dagger2/dagger2.iml" group="AndroidLearning/dagger2" />
+      <module fileurl="file://$PROJECT_DIR$/jetpack.iml" filepath="$PROJECT_DIR$/jetpack.iml" group="AndroidLearning/jetpack" />
+      <module fileurl="file://$PROJECT_DIR$/../libcommon/libcommon.iml" filepath="$PROJECT_DIR$/../libcommon/libcommon.iml" group="AndroidLearning/libcommon" />
+      <module fileurl="file://$PROJECT_DIR$/../mvp/mvp.iml" filepath="$PROJECT_DIR$/../mvp/mvp.iml" group="AndroidLearning/mvp" />
+      <module fileurl="file://$PROJECT_DIR$/../rxmodule/rxmodule.iml" filepath="$PROJECT_DIR$/../rxmodule/rxmodule.iml" group="AndroidLearning/rxmodule" />
+      <module fileurl="file://$PROJECT_DIR$/../view/view.iml" filepath="$PROJECT_DIR$/../view/view.iml" group="AndroidLearning/view" />
+    </modules>
+  </component>
+</project>

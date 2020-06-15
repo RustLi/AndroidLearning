@@ -7,7 +7,7 @@ android {
 
     defaultConfig {
         applicationId "com.rustli.jetpack"
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -57,4 +57,6 @@ dependencies {
     //lifecycle
     def lifecycle_version = "2.1.0"
     implementation "androidx.lifecycle:lifecycle-runtime:$lifecycle_version"
+
+    implementation 'pub.devrel:easypermissions:1.0.1'
 }
