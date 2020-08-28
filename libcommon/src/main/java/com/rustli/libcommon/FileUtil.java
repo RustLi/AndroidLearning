@@ -1,6 +1,9 @@
 package com.rustli.libcommon;
 
 import android.content.Context;
+import android.os.Environment;
+import android.text.TextUtils;
+import android.util.Log;
 
 import androidx.annotation.NonNull;
 
@@ -17,6 +20,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 public class FileUtil {
+    private static final String TAG = "FileUtil";
     /**
      * des: 获取应用私有目录
      * @param
@@ -135,6 +139,25 @@ public class FileUtil {
                 e.printStackTrace();
             }
         }
+    }
+
+    private static final String path =  Environment.getExternalStorageDirectory().getAbsolutePath() + "/skynet/test";
+    private void writeFile(String sb) throws Exception {
+        Log.d(TAG, "writeFile: sb = " + sb);
+        if (TextUtils.isEmpty(sb)){
+            return;
+        }
+        File file = new File(path);
+        if (!file.exists()){
+            boolean createRet = file.mkdirs();
+            Log.d(TAG, "writeFile: createRet = " + createRet);
+        }
+        String pFilePath = path + File.separator + "test.log";
+        file = new File(pFilePath);
+        FileOutputStream fos = new FileOutputStream(file, true);
+        fos.write(sb.getBytes());
+        fos.flush();
+        fos.close();
     }
 
 }
